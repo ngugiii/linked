@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  scroll-behavior: smooth;
+}
+
+.main{
+  background: rgb(21,14,40);
+background: linear-gradient(45deg, rgba(21,14,40,1) 30%, rgba(98,8,121,1) 55%, rgba(21,14,40,1) 79%);
+}
+.primaryColor{
+  background: rgb(144,58,255);
+background: linear-gradient(45deg, rgba(144,58,255,1) 23%, rgba(254,52,185,1) 73%);
+}
+.date{
+  color:#D434FE;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vertical-timeline-element-content {
+  border-bottom: none; 
+}
