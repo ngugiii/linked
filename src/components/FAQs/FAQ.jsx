@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import faqImg from "../../assets/faq.png";
 import { FAQQuestions } from "./faqs";
+import star from "../../assets/star.svg";
+import grayStar from "../../assets/grey_star.svg";
+import purple from "../../assets/purple_star.svg";
 
 const FAQ = () => {
   const [showAnswers, setShowAnswers] = useState(
@@ -15,8 +18,24 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faqs" className="faq w-full text-white px-32 py-8">
+    <section id="faqs" className="relative faq w-full text-white px-32 py-8">
       <div className="full w-full flex justify-between items-center">
+      <img
+        src={purple}
+        className="absolute top-[8rem] md:block hidden left-[2rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={star}
+        className="absolute top-[15rem] md:block hidden right-[10rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[32rem] md:block hidden left-[46rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={purple}
+        className="absolute top-[14rem] md:block hidden left-[42rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
         <div className="faqs-left w-full">
           <div className="faqs-header font-bold text-[30px] mb-3">
             <h1>Frequently Ask</h1>

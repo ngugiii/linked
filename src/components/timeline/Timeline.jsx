@@ -5,11 +5,30 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { timelineData } from "./timelineData";
+import star from "../../assets/star.svg";
+import grayStar from "../../assets/grey_star.svg";
+import purple from "../../assets/purple_star.svg";
 
 const Timeline = () => {
   return (
-    <section className="timeline px-32 text-white py-7 w-full">
+    <section className="timeline relative px-32 text-white py-7 w-full">
       <div className="timeline-header w-full flex flex-col justify-center items-center mb-16">
+      <img
+        src={purple}
+        className="absolute top-[8rem] md:block hidden left-[17rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={star}
+        className="absolute top-[15rem] md:block hidden right-[10rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[32rem] md:block hidden left-[24rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[14rem] md:block hidden left-[42rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
         <h1 className="text-[40px] font-bold">Timeline</h1>
         <p>
           Here is the breakdown of the time we anticipate using for the upcoming event.

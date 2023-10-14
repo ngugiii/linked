@@ -1,11 +1,26 @@
 import React from "react";
 import criteriaImg from "../../assets/criteria.png";
 import { Link } from "react-router-dom";
+import star from "../../assets/star.svg";
+import grayStar from "../../assets/grey_star.svg";
+import purple from "../../assets/purple_star.svg";
 
 const Criteria = () => {
   return (
-    <section className="criteria px-32 py-3 text-white">
+    <section className="relative criteria px-32 py-3 text-white">
       <div className="full flex justify-between w-full items-center">
+        <img
+        src={purple}
+        className="absolute top-[4rem] md:block hidden left-[10rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={star}
+        className="absolute top-[28rem] md:block hidden left-[38rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[18rem] md:block hidden left-[24rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
         <div className="criteria-left w-full">
           <img src={criteriaImg} alt="" className="w-[450px] h-[450px]" />
         </div>

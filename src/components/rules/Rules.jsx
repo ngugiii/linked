@@ -1,10 +1,20 @@
 import React from 'react'
 import rulesImg from "../../assets/rules.png"
+import star from "../../assets/star.svg";
+import grayStar from "../../assets/grey_star.svg";
 
 const Rules = () => {
   return (
-    <section className="rules_guidelines w-full px-32 py-7 text-white">
+    <section className="relative rules_guidelines w-full px-32 py-7 text-white">
         <div className="full w-full flex justify-between items-center">
+      <img
+        src={star}
+        className="absolute top-[23rem] md:block hidden right-[36rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[8rem] md:block hidden left-[24rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
             <div className="rules-left w-full">
                 <div className="rules-header mb-3">
                 <h1 className='font-bold text-[35px]'>Rules and <br /> <span className="text-[#D434FE]">Guidelines</span></h1>

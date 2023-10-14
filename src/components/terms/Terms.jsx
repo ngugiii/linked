@@ -1,11 +1,38 @@
 import React from "react";
 import termsIMG from "../../assets/key.png";
 import {BsFillCheckCircleFill} from "react-icons/bs";
+import star from "../../assets/star.svg";
+import grayStar from "../../assets/grey_star.svg";
+import purple from "../../assets/purple_star.svg";
 
 const Terms = () => {
   return (
-    <section className="terms w-full px-32 py-12 text-white">
+    <section className="relative terms w-full px-32 py-12 text-white">
       <div className="full w-full flex justify-center items-center">
+      <img
+        src={purple}
+        className="absolute top-[5rem] md:block hidden left-[27rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={purple}
+        className="absolute top-[28rem] md:block hidden right-[13rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={star}
+        className="absolute top-[15rem] md:block hidden right-[10rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={star}
+        className="absolute top-[40rem] md:block hidden right-[18rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[45rem] md:block hidden left-[36rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[14rem] md:block hidden left-[42rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
         <div className="terms-left w-full">
           <div className="terms-header mb-12 w-full">
             <div className="header mb-5">

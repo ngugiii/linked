@@ -6,6 +6,9 @@ import Typewriter from "../typeWriter/TypeWriter";
 import line from "../../assets/home_page_svg.svg"
 import fire from "../../assets/fire.png"
 import chain from "../../assets/chain.png"
+import star from "../../assets/star.svg";
+import grayStar from "../../assets/grey_star.svg";
+import purple from "../../assets/purple_star.svg";
 
 const Header = () => {
   const targetDate = new Date("2023-11-18T00:00:00Z");
@@ -37,7 +40,23 @@ const Header = () => {
 
   return (
     <section className="header w-full h-[100vh] text-white px-24">
-      <div className="header-full h-full flex flex-between">
+      <div className="header-full h-full flex md:flex-row flex-col flex-between">
+      <img
+        src={purple}
+        className="absolute top-[8rem] md:block hidden left-[17rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={star}
+        className="absolute top-[15rem] md:block hidden right-[10rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[32rem] md:block hidden left-[24rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
+      <img
+        src={grayStar}
+        className="absolute top-[14rem] md:block hidden left-[42rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
+      />
         <div className="header-left h-full mt-[7rem] font-extrabold">
           <h2 className="text-[50px] font-extrabold text-left">
             getlinked Tech
