@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import man from "../../assets/man.png";
-import layer from "../../assets/image 1.png";
+import layer from "../../assets/image1.png";
 import Typewriter from "../typeWriter/TypeWriter";
 import line from "../../assets/home_page_svg.svg";
 import fire from "../../assets/fire.png";
