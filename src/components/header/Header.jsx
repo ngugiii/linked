@@ -119,7 +119,7 @@ const targetDate = tomorrow;
         <div className="header-right w-full flex flex-col items-center">
           <div className="w-full relative">
             <img src={man} data-aos="fade-left" className="w-[35rem]" alt="man wearing Glasses" />
-            {/* <img src={layer} data-aos="zoom-in" className="w-[35rem] animate-pulse absolute top-0 h-auto mx-auto" alt="man" /> */}
+            <img src={layer} data-aos="zoom-in" className="w-[35rem] animate-pulse absolute top-0 h-auto mx-auto" alt="man" />
           </div>
         </div>
       </div>
