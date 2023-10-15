@@ -8,23 +8,19 @@ const Typewriter = ({ text, delay, loop }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!isDeleting) {
-        // If not deleting, add a character
         if (currentIndex < text.length) {
           setDisplayText((prevText) => prevText + text[currentIndex]);
           setCurrentIndex(currentIndex + 1);
         } else {
-          // If the entire text is displayed and loop is enabled, start deleting
           if (loop) {
             setIsDeleting(true);
           }
         }
       } else {
-        // If deleting, remove a character
         if (currentIndex >= 0) {
           setDisplayText((prevText) => prevText.slice(0, -1));
           setCurrentIndex(currentIndex - 1);
         } else {
-          // If the text is entirely deleted, stop deleting and reset the index
           setIsDeleting(false);
           setCurrentIndex(0);
         }
@@ -34,7 +30,7 @@ const Typewriter = ({ text, delay, loop }) => {
     return () => clearTimeout(timer);
   }, [currentIndex, delay, isDeleting, loop, text]);
 
-  return <span className=" italic font-extrabold text-2xl">{displayText}</span>;
+  return <span className=" italic font-extrabold md:text-2xl text-base">{displayText}</span>;
 };
 
 export default Typewriter;

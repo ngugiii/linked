@@ -1,7 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
+import close from "../../assets/close.svg"
 
+
+const MobileMenu =({closeMobileMenu})=>{
+  const location = useLocation();
+  const pathname = location.pathname;
+  return (
+    <div className="absolute top-[4rem] bg-[#150e28] border-2 z-10 border-[#d434fe] p-8 rounded-md right-4 w-[14rem] h-3rem">
+      <div className="close w-full flex justify-end mb-3">
+        <img src={close} alt="" onClick={closeMobileMenu} />
+      </div>
+      <div className="">
+      <nav className="">
+            <ul className="text-white flex flex-col">
+              {pathname === "/" && (
+                <>
+                  <li className="text-white mr-3 mb-2 text-gradient-hover">
+                    <a href="#timeline" onClick={closeMobileMenu}>Timeline</a></li>
+                    <li className="text-white mr-3 mb-2 text-gradient-hover">
+                    <a href="#introduction" onClick={closeMobileMenu}>Overview</a></li>
+                  <li className="text-white mr-3 mb-2 text-gradient-hover">
+                    <a href="#faqs" onClick={closeMobileMenu}>FAQs</a>
+                  </li>
+                </>
+              )}
+              {pathname !== "/" && (
+                <Link to="/">
+                  <li className="text-white mr-3 mb-2 text-gradient-hover" onClick={closeMobileMenu}>Home</li>
+                </Link>
+              )}
+              {pathname !== "/contact" && (
+                <Link to="/contact">
+                  <li className="text-white mr-3 mb-2 text-gradient-hover" onClick={closeMobileMenu}>Contact</li>
+                </Link>
+              )}
+              <Link to="/register">
+                <li className="primaryColor text-center px-2 py-1 rounded" onClick={closeMobileMenu}>Register</li>
+              </Link>
+            </ul>
+          </nav>
+      </div>
+    </div>
+  )
+}
 
 
 const Navbar = () => {
@@ -35,8 +78,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar w-full px-24 py-3">
-      <div className="flex justify-between items-center">
+    <div className="navbar relative w-full sm:px-24 px-4 py-3">
+      <div className="w-full flex justify-between items-center">
         <div className="logo">
           <Link to="/">
             <h1 className="text-[36px] text-white font-bold">
@@ -50,8 +93,10 @@ const Navbar = () => {
             <ul className="text-white flex">
               {pathname === "/" && (
                 <>
-                  <li className="text-white mr-3 text-gradient-hover">Timeline</li>
-                  <li className="text-white mr-3 text-gradient-hover">Overview</li>
+                  <li className="text-white mr-3 mb-2 text-gradient-hover">
+                    <a href="#timeline">Timeline</a></li>
+                    <li className="text-white mr-3 mb-2 text-gradient-hover">
+                    <a href="#introduction">Overview</a></li>
                   <li className="text-white mr-3 text-gradient-hover">
                     <a href="#faqs">FAQs</a>
                   </li>
@@ -83,12 +128,12 @@ const Navbar = () => {
                 onClick={toggleMobileMenuOpen}
               />
             )}
-          {/* {isMobileMenuOpen && !shouldRender && (
+          {isMobileMenuOpen && !shouldRender && (
         <MobileMenu
           closeMobileMenu={closeMobileMenu}
           isMobileMenuOpen={isMobileMenuOpen}
         />
-      )} */}
+      )}
       </div>
     </div>
   );

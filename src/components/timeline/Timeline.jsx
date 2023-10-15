@@ -11,7 +11,7 @@ import purple from "../../assets/purple_star.svg";
 
 const Timeline = () => {
   return (
-    <section className="timeline relative px-32 text-white py-7 w-full">
+    <section id="timeline" className="timeline relative md:px-32 px-8 text-white py-7 w-full">
       <div className="timeline-header w-full flex flex-col justify-center items-center mb-16">
       <img
         src={purple}
@@ -30,7 +30,7 @@ const Timeline = () => {
         className="absolute top-[14rem] md:block hidden left-[42rem]  md:w-[1.625rem] md:h-[2rem] w-[0.625rem] animate-pulse h-[0.75rem]"
       />
         <h1 className="text-[40px] font-bold">Timeline</h1>
-        <p>
+        <p className=" md:text-left text-center">
           Here is the breakdown of the time we anticipate using for the upcoming event.
         </p>
       </div>

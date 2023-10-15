@@ -42,7 +42,8 @@
 } */
 
 .main {
-  background-color: #150E28;
+  background: rgb(22,14,43);
+background: linear-gradient(87deg, rgba(22,14,43,1) 0%, rgba(25,14,45,1) 98%);
 }
 .primaryColor{
  background:  linear-gradient(
