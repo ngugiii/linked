@@ -15,25 +15,43 @@
 } */
 /* .main {
   background: rgba(21, 14, 40, 1);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                    linear-gradient(45deg, rgba(144, 58, 255, 0.2) 5%, rgba(21, 14, 40, 0.2) 5%, rgba(21, 14, 40, 0.2) 95%, rgba(144, 58, 255, 0.2) 95%),
-                    linear-gradient(135deg, rgba(144, 58, 255, 0.2) 5%, rgba(21, 14, 40, 0.2) 5%, rgba(21, 14, 40, 0.2) 95%, rgba(144, 58, 255, 0.2) 95%);
-  background-size: 100% 100%, 20px 20px, 20px 20px;
-  background-position: 0 0, 0 0, 10px 10px;
-} */
-.main {
-  background: rgba(21, 14, 40, 1);
-  background-image: radial-gradient(circle at 20% 20%, #903AFF 10px, transparent 0),
-                    radial-gradient(circle at 60% 60%, #150E28 10px, transparent 0),
-                    linear-gradient(to bottom, rgba(21, 14, 40, 1) 0%, rgba(21, 14, 40, 1) 100%);
-  background-size: 100% 100%, 100% 100%, 100% 100%;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0, 10px 10px;
+  }
+  100% {
+    background-position: 0 -20px, 10px -10px;
+  }
+}
 
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(144, 58, 255, 0.2) 5%, rgba(21, 14, 40, 0.2) 5%, rgba(21, 14, 40, 0.2) 95%, rgba(144, 58, 255, 0.2) 95%),
+              linear-gradient(135deg, rgba(144, 58, 255, 0.2) 5%, rgba(21, 14, 40, 0.2) 5%, rgba(21, 14, 40, 0.2) 95%, rgba(144, 58, 255, 0.2) 95%);
+  background-size: 20px 20px;
+  animation: moveBackground 7s linear infinite;
+} */
+
+.main {
+  background-color: #150E28;
+}
 .primaryColor{
-  background: rgb(144,58,255);
-background: linear-gradient(45deg, rgba(144,58,255,1) 23%, rgba(254,52,185,1) 73%);
+ background:  linear-gradient(
+    270deg,
+    #903aff 0%,
+     #d434fe 56.42%,
+    #ff26b9 99.99%,
+    #fe34b9 100%
+  );
 }
 
 .date{
@@ -48,3 +66,29 @@ background: linear-gradient(45deg, rgba(144,58,255,1) 23%, rgba(254,52,185,1) 73
 .vertical-timeline-element-content {
   border-bottom: none; 
 }
+
+.form{
+/* From https://css.glass */
+background: rgba(32, 21, 61, 1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(11.7px);
+-webkit-backdrop-filter: blur(11.7px);
+border: 1px solid rgba(32, 21, 61, 0.35);
+}
+.text-gradient-hover {
+  
+  transition: background 0.3s;
+}
+
+.text-gradient-hover:hover {
+  background-image: linear-gradient(45deg, #ff00ff, #0000ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Change gradient colors on hover */
+}
+
+/* .vertical-timeline::before {
+  border-left: 3px solid #D434FE;
+  border-radius: 8px;
+} */
